@@ -11,8 +11,11 @@ namespace CodeChallenge_PreWork
 
             //Console.WriteLine(IsLeapYear(1900));
 
-            int[] sequence = { 0, -7, 0 };
-            Console.WriteLine(IsPerfect(sequence));
+            //int[] sequence = { 0, -7, 0 };
+            //Console.WriteLine(IsPerfect(sequence));
+
+            int[,] myArray = new int[3, 5] { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+            Console.WriteLine(SumArray(myArray));
         }
 
         static int CheckScore(int[] numArray, int number)
@@ -66,6 +69,22 @@ namespace CodeChallenge_PreWork
                 return "Yes";
             }
             return "No";
+        }
+
+        static int[] SumArray(int[,] multiDimArray)
+        {
+            int[] resultArray = new int[multiDimArray.GetLength(0)];
+            for(int i=0; i<multiDimArray.GetLength(0); i++)
+            {
+                int sum = 0;
+                for(int j=0; j<multiDimArray.GetLength(1); j++)
+                {
+                    sum += multiDimArray[i, j];
+                }
+                resultArray[i] = sum;
+            }
+            Console.WriteLine(string.Join(",", resultArray));
+            return resultArray;
         }
     }
 }
