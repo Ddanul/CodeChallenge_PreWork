@@ -73,8 +73,18 @@ namespace CodeChallenge_PreWork
 
         static int[] SumArray(int[,] multiDimArray)
         {
-            int[] thisArray = { 1, 2, 3, 4 };
-            return thisArray;
+            int[] resultArray = new int[multiDimArray.GetLength(0)];
+            for(int i=0; i<multiDimArray.GetLength(0); i++)
+            {
+                int sum = 0;
+                for(int j=0; j<multiDimArray.GetLength(1); j++)
+                {
+                    sum += multiDimArray[i, j];
+                }
+                resultArray[i] = sum;
+            }
+            Console.WriteLine(string.Join(",", resultArray));
+            return resultArray;
         }
     }
 }
