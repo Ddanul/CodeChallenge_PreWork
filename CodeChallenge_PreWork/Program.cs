@@ -6,14 +6,22 @@ namespace CodeChallenge_PreWork
     {
         static void Main(string[] args)
         {
-            int[] array = { 1, 2, 3, 4, 5 };
-            Console.WriteLine(CheckScore(array, 5));
+            int[] array = { 1, 4, 4, 4, 5 };
+            Console.WriteLine(CheckScore(array, 4));
 
         }
 
         static int CheckScore(int[] numArray, int number)
         {
-            return 5;
+            int count = 0;
+            for(int i=0; i<numArray.Length; i++)
+            {
+                if(numArray[i] == number)
+                {
+                    count++;
+                }
+            }
+            return number*count;
         }
     }
 }
