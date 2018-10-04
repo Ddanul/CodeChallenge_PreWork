@@ -9,7 +9,7 @@ namespace CodeChallenge_PreWork
             //int[] array = { 1, 4, 4, 4, 5 };
             //Console.WriteLine(CheckScore(array, 4));
 
-            Console.WriteLine(IsLeapYear(1996));
+            Console.WriteLine(IsLeapYear(1900));
 
         }
 
@@ -30,7 +30,7 @@ namespace CodeChallenge_PreWork
         {
             if(year%4 == 0)
             {
-                if (year % 100 != 0)
+                if (year % 100 == 0)
                 {
                     if (year % 400 == 0)
                     {
@@ -43,8 +43,7 @@ namespace CodeChallenge_PreWork
                 }
                 return "This is a Leap Year!";
             }
-
-            return "This is not a Leap Year";
+            return "This is NOT a Leap Year";
         }
     }
 }
