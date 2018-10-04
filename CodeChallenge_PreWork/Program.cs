@@ -11,7 +11,7 @@ namespace CodeChallenge_PreWork
 
             //Console.WriteLine(IsLeapYear(1900));
 
-            int[] sequence = { 1, 2, 3 };
+            int[] sequence = { 0, -7, 0 };
             Console.WriteLine(IsPerfect(sequence));
         }
 
